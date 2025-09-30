@@ -27,7 +27,7 @@ const validSides = ["duplex", "duplexshort", "duplexlong", "simplex"];
 
 export default async function print(
   pdf: string,
-  options: PrintOptions = {}
+  options: PrintOptions = {},
 ): Promise<void> {
   throwIfUnsupportedOperatingSystem();
   if (!pdf) throw "No PDF specified";
@@ -101,7 +101,7 @@ function getPrintSettings(options: PrintOptions): string[] {
       printSettings.push(orientation);
     } else {
       throw `Invalid orientation provided. Valid names: ${validOrientations.join(
-        ", "
+        ", ",
       )}`;
     }
   }
