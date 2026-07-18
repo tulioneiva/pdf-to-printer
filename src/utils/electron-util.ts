@@ -1,4 +1,4 @@
-// Taken from https://github.com/sindresorhus/electron-util/blob/master/node.js
+// Adapted from electron-util
 
 const isElectron = "electron" in process.versions;
 

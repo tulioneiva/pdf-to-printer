@@ -1,8 +1,5 @@
 # PDF to Printer
 
-[![codecov](https://codecov.io/gh/artiebits/pdf-to-printer/branch/master/graph/badge.svg)](https://codecov.io/gh/artiebits/pdf-to-printer)
-![npm](https://img.shields.io/npm/dw/pdf-to-printer)
-
 Print PDF files and images directly to Windows printers from Node.js or Electron. Works with office printers, label printers (Zebra, Rollo), and network printers alike.
 
 ## Features
@@ -13,11 +10,11 @@ Print PDF files and images directly to Windows printers from Node.js or Electron
 - **Printer discovery** - list all available printers
 - **Fast and reliable** using SumatraPDF engine
 - **TypeScript support** with full type definitions
-- **Windows only** - for Unix-like systems, see [unix-print](https://github.com/artiebits/unix-print)
+- **Windows only** - for Unix-like systems, use a separate Unix printing library
 
 ## Requirements
 
-- **Windows** — for macOS and Linux, use [unix-print](https://github.com/artiebits/unix-print) (same API, same author)
+- **Windows**
 - Node.js 14 or later
 
 ## Installation
@@ -94,12 +91,6 @@ await print(path.join(__dirname, "report.pdf"), {
 ```typescript
 await print("document.pdf", { pages: "1-3,5", subset: "odd" });
 ```
-
-## Support This Project
-
-If you rely on this package, please consider supporting it. Maintaining an open source project takes time and your support would be greatly appreciated.
-
-<a href="https://www.buymeacoffee.com/artiebits" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 207px !important;" ></a>
 
 ## API Reference
 
@@ -188,7 +179,3 @@ type Printer = {
   paperSizes: string[]; // Array of supported paper sizes
 };
 ```
-
-## License
-
-[MIT](LICENSE)
